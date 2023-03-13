@@ -1,5 +1,12 @@
-import { initPage } from "./initpage.js";
+import {initPage} from "./initpage.js";
+import './style.css';
 
 console.log("supre ");
 
-initPage();
+const content = document.querySelector("#content");
+
+initPage(content);
+
+
+
+

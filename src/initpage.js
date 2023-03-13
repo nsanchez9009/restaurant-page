@@ -1,26 +1,43 @@
-import evilPicture from './media/evilBurger.jpg';
+import bob from './media/bob.jpg';
 
-const initPage = () => {
-    const headLine = document.createElement('div');
-    headLine.id = "headLine";
-    headLine.textContent = "Evil Burger!";
+const initPage = (content) => {
+    const tabs = document.createElement('div');
+    const homeTab = document.createElement('div');
+    const menuTab = document.createElement('div');
+    const contactTab = document.createElement('div');
 
-    const mainImage = document.createElement('div');
-    mainImage.id = "mainImage";
+    homeTab.textContent = "Home";
+    homeTab.classList.add("tab");
+    tabs.appendChild(homeTab);
 
-    const mainImgSrc = new Image();
-    mainImgSrc.src = evilPicture;
+    menuTab.textContent = "Menu";
+    menuTab.classList.add("tab");
+    tabs.appendChild(menuTab);
 
-    mainImage.appendChild(mainImgSrc);
+    contactTab.textContent = "Contact";
+    contactTab.classList.add("tab");
+    tabs.appendChild(contactTab);
 
-    const mainText = document.createElement('div');
-    mainText.id = "mainText";
-    mainText.textContent = "WOW IM SO AFRAID TO EAT AT EVIL BURGER BUT THE BURGERS ARE SO GOOD SO I KEEP COMING BACK!"
+    tabs.id = "tabs";
+    tabs.classList.add("text");
 
-    const content = document.querySelector("#content");
-    content.appendChild(headLine);
-    content.appendChild(mainImage);
-    content.appendChild(mainText);
+    content.appendChild(tabs);
+
+    const backgroundImg = new Image();
+    backgroundImg.src = bob;
+    backgroundImg.id = "background";
+
+    content.appendChild(backgroundImg);
+
+    const mainContainer = document.createElement('div');
+    mainContainer.id = "mainContainer";
+
+    const title = document.createElement('div');
+    title.id = "title";
+    title.classList.add("text");
+    mainContainer.appendChild(title);
+
+    content.appendChild(mainContainer);
 }
 
 export {
