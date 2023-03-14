@@ -7,14 +7,17 @@ const initPage = (content) => {
     const contactTab = document.createElement('div');
 
     homeTab.textContent = "Home";
-    homeTab.classList.add("tab");
+    homeTab.id = "homeTab";
+    homeTab.classList.add("tab", "selected");
     tabs.appendChild(homeTab);
 
     menuTab.textContent = "Menu";
+    homeTab.id = "menuTab";
     menuTab.classList.add("tab");
     tabs.appendChild(menuTab);
 
     contactTab.textContent = "Contact";
+    homeTab.id = "contactTab";
     contactTab.classList.add("tab");
     tabs.appendChild(contactTab);
 
