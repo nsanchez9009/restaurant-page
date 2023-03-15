@@ -54,6 +54,7 @@
 .tab:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .selected {
@@ -64,19 +65,29 @@
 #mainContainer {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
     background-color: black;
-    height: 100px;
-    width: 100px;
+    opacity: 90%;
+    height: 70%;
+    width: 50%;
     z-index: 0;
+    border-radius: 10px;
 }
 
 #title {
     text-align: center;
-
-    
+    font-size: 50px;
 }
 
-#items {
+#img {
+    object-fit: fill;
+    height: auto;
+    width: 60%;
+    border-radius: 1%;
+}
 
+#body {
+    text-align: center;
 }
